@@ -59,24 +59,5 @@ void rb_destroy(struct RingBuffer* rb){
     free(rb);
 }
 
-__attribute__((constructor)) void rb_unittest(void){
-    struct RingBuffer* buf = rb_new(3);
-    rb_push(buf, 1);
-    assert(rb_pop(buf) == 1);
-    rb_push(buf, 2);
-    rb_push(buf, 3);
-    assert(rb_pop(buf) == 2);
-    rb_push(buf, 4);
-    rb_push(buf, 5);
-    assert(rb_pop(buf) == 3);
-    rb_push(buf, 6);
-    assert(rb_pop(buf) == 4);
-    rb_push(buf, 7);
-    assert(rb_pop(buf) == 5);
-    assert(rb_pop(buf) == 6);
-    assert(rb_pop(buf) == 7);
-    rb_destroy(buf);
-}
-
 
 
