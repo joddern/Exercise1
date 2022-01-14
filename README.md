@@ -4,7 +4,7 @@ Exercise 1 : Concurrency Essentials
 1: If you are not on the lab
 ----------------------------
 
-This exercise does not require that you use the machines at the real-time lab. However, for the last part of the exercise (and for exercise 2) you will need some way to run code written in C and Go. Here are some alternatives if you are not on the lab:
+This exercise does not require that you use the machines at the real-time lab. However, you will need some way to run code written in C and Go. Here are some alternatives if you are not on the lab:
 
  - C:
    - Windows: Use [TDM-GCC](https://jmeubank.github.io/tdm-gcc/download/), then use `gcc` from the command line or powershell.
@@ -53,7 +53,7 @@ thread_2:
         i--
 ```
             
-There is some starter code in the folder [shared variable](./shared%20variable). Fill out the missing code and run the programs.
+There is some starter code in the folder [shared variable](./3%20-%20shared%20variable). Fill out the missing code and run the programs.
 
 Create a new file called `result.md` inside this directory explaining what happens, and why (Hint: the result should not always be zero...). Then add, commit, and push the updated code and the results file, and verify that you can see the updated version on the web.
 
@@ -96,7 +96,7 @@ Commit and push your code changes to GitHub.
 5: Bounded buffer
 -----------------
 
-From the previous part, it may appear that message passing requires a lot more code to do the same work - so naturally, in this part the opposite will be the case. In the folder [bounded buffer](./bounded%20buffer) you will find the starting point for a *bounded buffer* problem.
+From the previous part, it may appear that message passing requires a lot more code to do the same work - so naturally, in this part the opposite will be the case. In the folder [bounded buffer](./5%20-%20bounded%20buffer) you will find the starting point for a *bounded buffer* problem.
 
 The bounded buffer should work as follows:
  - The `push` functionality should put one data item into the buffer - unless it is full, in which case it should block (think "pause" or "wait") until room becomes available.
@@ -151,8 +151,8 @@ As usual - commit and push your changes to GitHub.
 
 You do not need "perfect" or even complete answers to these questions. Feel free to ask the student assistants (even during the exercise approval process) to discuss any questions you get stuck on - you might find you learn more in less time this way.
 
-Exercise 1 : Things to think about until next time
-==================================================
+Things to think about until next time
+=====================================
 
 This part of the exercise is not for handing in, just for thinking about. Talk to other groups, assistants, or even people who have taken the course in previous years.
 
@@ -187,8 +187,11 @@ Here are a few things you should consider:
  - Code analysis/debugging/IDE support?
 
 
-Extra : Multithreading in other languages
------------------------------------------
+Extra
+=====
+
+9: Multithreading in other languages
+------------------------------------
 
 This is an optional exercise. You are not recommended to do this for "completion" or "achievement points". You should only do it if you're interested in learning more about how different languages can protect against data races, or you're considering to use one of these languages in your project. 
 
