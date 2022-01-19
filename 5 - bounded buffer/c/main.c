@@ -11,8 +11,8 @@
 struct BoundedBuffer {
     struct RingBuffer*  buf;
     pthread_mutex_t     mtx;
-    sem_t               empty;
-    sem_t               full;
+    sem_t               numElements;
+    sem_t               capacity;
     
     
 };
@@ -23,8 +23,8 @@ struct BoundedBuffer* buf_new(int size){
     
     pthread_mutex_init(&buf->mtx, NULL);
     // TODO: initialize semaphores
-    //sem_init(&buf->full,  0, /*starting value?*/);
-	//sem_init(&buf->empty, 0, /*starting value?*/);
+    //sem_init(&buf->capacity,      0, /*starting value?*/);
+	//sem_init(&buf->numElements,   0, /*starting value?*/);
     
     return buf;    
 }
@@ -32,8 +32,8 @@ struct BoundedBuffer* buf_new(int size){
 void buf_destroy(struct BoundedBuffer* buf){
     rb_destroy(buf->buf);
     pthread_mutex_destroy(&buf->mtx);
-    sem_destroy(&buf->empty);
-    sem_destroy(&buf->full);
+    sem_destroy(&buf->numElements);
+    sem_destroy(&buf->capacity);
     free(buf);
 }
 
