@@ -1,6 +1,24 @@
 Exercise 1 : Concurrency Essentials
 ===================================
 
+0: Generate Github personal token
+----------------------------
+
+From August of 2021 you need a token instead of a password from the git command line to clone the repo.
+Follow these steps:
+ -> Click the drop-down menu by your profile picture
+ -> Click "Settings"
+ -> Click "Developer settings" 
+ -> Personal access token
+ -> Generate new token
+ -> In Note, write: "Sanntid", for example
+ -> Expiration: July of 2022 (after the project ends)
+ -> Tick off at least repo, admin:org_hook and delete_repo
+ -> Generate token
+IMPORTANT: copy the token before exiting the page, it is only generated this one time.
+
+Use the token when prompted for a password when cloning the repo.
+
 1: If you are not on the lab
 ----------------------------
 
