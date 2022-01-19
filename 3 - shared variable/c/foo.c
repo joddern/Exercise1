@@ -1,4 +1,5 @@
 // Compile with `gcc foo.c -std=c99 -lpthread`, or use the makefile
+// The executable will be named `foo` if you use the makefile, or `a.out` if you use gcc directly
 
 #include <pthread.h>
 #include <stdio.h>
