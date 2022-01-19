@@ -1,6 +1,6 @@
 CC = clang
 
-CFLAGS = -Wall -g -std=c99 
+CFLAGS = -Wall -g -std=gnu99 
 LDFLAGS = -lpthread -g
 SRC = foo.c
 
