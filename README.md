@@ -12,7 +12,7 @@ Follow these steps:
  - Personal access tokens
  - Generate new token
  - In Note, write: "Sanntid", for example
- - Expiration: July of 2022 (after the project ends)
+ - Expiration: July of 2023 (after the project ends)
  - Tick off (at least) `repo`, `admin:org_hook` and `delete_repo`
  - Generate token
  
@@ -36,11 +36,11 @@ Go has an [interactive tour](http://tour.golang.org/list) you can take. Go's syn
 2: Version control
 ------------------
 
-If you can read this text you have already taken your first steps in starting to use a version control system.
+If you can read this text, you have already taken your first steps in starting to use a version control system.
 
-A version control system is a tool helps a group of people work on the same files in a systematic and safe manner, allowing multiple users to make changes to the same file and merge the changes later. It is also possible to create diverging branches so that multiple independent areas of development can happen in parallel, then have these merged together safely at a later time. Version control systems also keep track of all previous versions of files, so that you can revert any or all changes made since a given date.
+A version control system is a tool that helps a group of people work on the same files in a systematic and safe manner, allowing multiple users to make changes to the same file and merge the changes later. It is also possible to create diverging branches so that independent areas of development can happen in parallel, and then have these merged safely later. Version control systems also keep track of all previous versions of files, so that you can revert any or all changes made since a given date.
 
-In this course we will be using GitHub Classroom, where you will find the assignment texts, project description, and all the code related to the project. You will be given private repositories on the TTK4145 organization, which means that teachers and student assistants will have access to your code by default, but other students will not. You can create issues that reference specific assignment tasks or part of your project code, while tagging the student assistants to get their attention.
+In this course, we will be using a GitHub Classroom, where you will find the assignment texts, project description, and all the code related to the project. You will be given private repositories on the TTK4145 organization, which means that teachers and student assistants will have access to your code by default, but other students will not. You can create issues that reference specific assignment tasks or part of your project code while tagging the student assistants to get their attention.
 
 You will not be able to complete this exercise without a very basic practical understanding of git. Unless you're already familiar with git, it's highly recommended to have a look at the following resources before moving on. Don't let the feeling that you have to google everything discourage you, this is perfectly fine, even expected. And don't forget that the student assistants are there to help you.
 
@@ -166,7 +166,7 @@ As usual - commit and push your changes to GitHub.
 6: Some questions
 -----------------
 
-[The file *questions*](/questions.md) contains a few questions regarding some of the concepts this exercise covers, as well as some broader engineering questions. Modify the file with your answers.
+The file [*questions*](/questions.md) contains a few questions regarding some of the concepts this exercise covers, as well as some broader engineering questions. Modify the file with your answers.
 
 You do not need "perfect" or even complete answers to these questions. Feel free to ask the student assistants (even during the exercise approval process) to discuss any questions you get stuck on - you might find you learn more in less time this way.
 
@@ -226,7 +226,7 @@ Task: Complete the program and verify that the answer is 0.
 
 ### Rust
 
-Rust uses its type system and compile-time checks to make sure that no data races are possible. This is possible by using the [marker traits](https://doc.rust-lang.org/std/marker/) [`Send` and `sync`](https://doc.rust-lang.org/beta/nomicon/send-and-sync.html). A data type is `Send` if you're allowed to send the data to another thread. If a data type is not marked as `Send` it generate a compile-time error if you try to send it between threads. Similarly for `Sync`, but sync data can be accessed from several threads at the same time, not just sent around between them.
+Rust uses its type system and compile-time checks to make sure that no data races are possible. This is possible by using the [marker traits](https://doc.rust-lang.org/std/marker/) [`Send` and `sync`](https://doc.rust-lang.org/beta/nomicon/send-and-sync.html). A data type is `Send` if you're allowed to send the data to another thread. If a data type is not marked as `Send`, it generates a compile-time error if you try to send it between threads. Similarly for `Sync`, but sync data can be accessed from several threads at the same time, not just sent around between them.
 
 The primitive integer types in rust are not "thread safe", and thus not `Sync`. But there is no reason they can't be sent between threads, so `Send` is implemented. Since Rust doesn't take a stance in which concurrency model to use (as long as you avoid undefined behavior) both the "channel" and "lock" solutions are possible. 
 
