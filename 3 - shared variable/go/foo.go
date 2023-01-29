@@ -19,6 +19,9 @@ func decrementing() {
 }
 
 func main() {
+    // I want to commit changes and add this file to the cloud
+    fmt.Println("Testing")
+
     // What does GOMAXPROCS do? What happens if you set it to 1?
     runtime.GOMAXPROCS(2)    
 	
